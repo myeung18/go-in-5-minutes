@@ -17,7 +17,8 @@ func init() {
 	rand.Seed(time.Now().UnixNano())
 }
 
-// getReady tells name to get ready. when they're done, it calls wg.Done() to indicate to anyone listening that they're done. this func also prints messages to indicate that name has started and finished getting ready.
+// getReady tells name to get ready. when they're done, it calls wg.Done() to indicate to anyone listening that they're
+// done. this func also prints messages to indicate that name has started and finished getting ready.
 func getReady(name string, wg *sync.WaitGroup) {
 	defer wg.Done()
 	fmt.Printf("%s started getting ready\n", name)
@@ -28,7 +29,8 @@ func getReady(name string, wg *sync.WaitGroup) {
 	fmt.Printf("%s spent %d seconds getting ready\n", name, sec)
 }
 
-// putOnShoes tells name to put on their shoes. when they're done, it calls wg.Done() to indicate to anyone listening that they're done. this func also prints messages to indicate that name has started and finished putting on their shoes.
+// putOnShoes tells name to put on their shoes. when they're done, it calls wg.Done() to indicate to anyone listening
+// that they're done. this func also prints messages to indicate that name has started and finished putting on their shoes.
 func putOnShoes(name string, wg *sync.WaitGroup) {
 	defer wg.Done()
 	fmt.Printf("%s started putting on shoes\n", name)
